@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-PH-pMH">
+                                <rect key="frame" x="135" y="506" width="50" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="削除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXz-oi-s9R">
+                                        <rect key="frame" x="7.5" y="15" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O0G-tk-Zjv"/>
+                                    <constraint firstAttribute="width" constant="50" id="j90-Tc-I8Y"/>
+                                    <constraint firstItem="NXz-oi-s9R" firstAttribute="centerY" secondItem="9Ha-PH-pMH" secondAttribute="centerY" id="rVn-qi-VB4"/>
+                                    <constraint firstItem="NXz-oi-s9R" firstAttribute="centerX" secondItem="9Ha-PH-pMH" secondAttribute="centerX" id="xH0-J2-fSA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZB-st-vYM" customClass="TextBoardView" customModule="Canvas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-jj-HpH">
+                                <rect key="frame" x="218" y="526" width="90" height="30"/>
+                                <state key="normal" title="プレビュー &gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fgh-jj-HpH" secondAttribute="bottom" constant="12" id="0F6-NB-gqI"/>
+                            <constraint firstItem="qZB-st-vYM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0SL-Jc-k6w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgh-jj-HpH" secondAttribute="trailing" constant="12" id="2cO-2J-wS8"/>
+                            <constraint firstItem="qZB-st-vYM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CDG-gk-w3G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qZB-st-vYM" secondAttribute="bottom" id="O2b-Tx-gs7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ha-PH-pMH" secondAttribute="bottom" constant="12" id="P1X-Q0-ZMq"/>
+                            <constraint firstItem="qZB-st-vYM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QdW-Tk-8Gn"/>
+                            <constraint firstItem="9Ha-PH-pMH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fy0-Qk-mut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="deleteView" destination="9Ha-PH-pMH" id="sNT-Zp-cK6"/>
+                        <outlet property="deleteViewBottomConstraint" destination="P1X-Q0-ZMq" id="e5A-qv-ALp"/>
+                        <outlet property="nextButton" destination="fgh-jj-HpH" id="5w8-s2-QjV"/>
+                        <outlet property="nextButtonBottomConstraint" destination="0F6-NB-gqI" id="uJS-Rr-P6V"/>
+                        <outlet property="textBoardView" destination="qZB-st-vYM" id="t1j-c8-7Qw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
